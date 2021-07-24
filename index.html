@@ -7,13 +7,60 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+<style>
+	.delete {
+  position: absolute;
+  padding: 0px 60px 0px 60px;
+  color: #f1f1f1
+	}
+
+	.delete:hover {
+		color: #ed6b6b
+	}
+	.check:hover {
+		color: #54c79d
+	}
+
+  	.check {
+  position: absolute;
+  padding: 0px 20px 0px 20px;
+  color: #f1f1f1
+	}
+
+	ul li.checked {
+  text-decoration: line-through;
+	}
+
+	.listt:hover {
+		background-color: lightgray;
+	}
+</style>
+
+<body class="w3-light-gray">
+
+	<div class="pt-5 px-96">
+		<div class="w3-dark-gray mx-auto h-20 w-96 shadow-xl rounded-md">
+			<p class="font-bold text-3xl px-8 pt-5 text-w3-light-gray">Minimal Todo List</p>
+		</div>
+	</div>
+	<div class="flex pt-10 px-80">
+		<div class="px-80">
+			<input class="w3-input w3-border w3-round-large w3-hover-gray w3-boarder-dark-gray " style="width:850%"
+				type='text' id="currentInput" onkeypress="EnterKey()">
+		</div>
+		<div class="flex px-80">
+			<span class="w3-button w3-circle w3-dark-gray" onclick="AddTodo()" class="addButton">+</span>
+		</div>
+	</div>
+
+	<ul id="currentUl" class="w3-ul font-bold text-4xl pt-80 w3-text-gray w3-center">
+	</ul>
+
 </body>
 
 </html>
